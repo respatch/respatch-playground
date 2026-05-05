@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "97095896ee8932ccf92b9d87a9554429",
+    "content-hash": "5d31e9da1cf5b08834a2ed7170398fee",
     "packages": [
         {
             "name": "composer/semver",
@@ -1895,6 +1895,38 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
+        },
+        {
+            "name": "respatch/respatch-bundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../server",
+                "reference": "ad086648f9cef8ac7a5aeb0bfd91631a62dd791b"
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/framework-bundle": "^6.4|^7.4|^8.0",
+                "zenstruck/messenger-monitor-bundle": "^0.6.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Respatch\\RespatchBundle\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Respatch\\RespatchBundle\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Acme bundle description",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/asset",
@@ -10199,7 +10231,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "respatch/respatch-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

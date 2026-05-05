@@ -50,6 +50,9 @@
             "bin/phpunit"
         ]
     },
+    "respatch/respatch-bundle": {
+        "version": "dev-main"
+    },
     "symfony/asset-mapper": {
         "version": "8.0",
         "recipe": {

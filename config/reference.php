@@ -1467,6 +1467,9 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         expired_worker_ttl?: int|Param, // How long to keep expired workers in cache (in seconds). // Default: 3600
  *     },
  * }
+ * @psalm-type RespatchConfig = array{
+ *     token?: scalar|Param|null, // Default: null
+ * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
@@ -1481,6 +1484,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     security?: SecurityConfig,
  *     monolog?: MonologConfig,
  *     zenstruck_messenger_monitor?: ZenstruckMessengerMonitorConfig,
+ *     respatch?: RespatchConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -1498,6 +1502,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         monolog?: MonologConfig,
  *         maker?: MakerConfig,
  *         zenstruck_messenger_monitor?: ZenstruckMessengerMonitorConfig,
+ *         respatch?: RespatchConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -1513,6 +1518,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
  *         zenstruck_messenger_monitor?: ZenstruckMessengerMonitorConfig,
+ *         respatch?: RespatchConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -1529,6 +1535,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         security?: SecurityConfig,
  *         monolog?: MonologConfig,
  *         zenstruck_messenger_monitor?: ZenstruckMessengerMonitorConfig,
+ *         respatch?: RespatchConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,

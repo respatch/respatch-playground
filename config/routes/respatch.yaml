@@ -1,0 +1,3 @@
+respatch_api:
+    resource: '@RespatchBundle/config/routes.php'
+    prefix: /_respatch/api
