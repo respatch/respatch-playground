@@ -7,7 +7,7 @@ framework:
             async:
                 dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
                 retry_strategy:
-                    max_retries: 3
+                    max_retries: 0
                     multiplier: 2
             failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
@@ -23,4 +23,6 @@ framework:
             Symfony\Component\Notifier\Message\SmsMessage: async
 
             # Route your messages to the transports
-            # 'App\Message\YourMessage': async
+            App\Message\TestMessageOne: async
+            App\Message\TestMessageTwo: async
+            App\Message\TestMessageThree: async

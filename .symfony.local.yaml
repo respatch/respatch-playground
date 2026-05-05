@@ -1,0 +1,12 @@
+proxy:
+    domains:
+        - respatch
+http:
+    daemon: true
+workers:
+    messenger_async:
+        cmd: [ 'symfony', 'console', 'messenger:consume', 'async' ,'--time-limit=3600' ]
+        watch: [ 'config', 'src', 'templates']
+    scheduler:
+        cmd: [ 'symfony', 'console', 'messenger:consume', 'scheduler_test', '--time-limit=3600' ]
+        watch: [ 'config', 'src' ]
