@@ -3,6 +3,8 @@ proxy:
         - respatch
 http:
     daemon: true
+    port: 8075
+    preferred_port: 8001
 workers:
     messenger_async:
         cmd: [ 'symfony', 'console', 'messenger:consume', 'async' ,'--time-limit=3600' ]
