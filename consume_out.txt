@@ -1,0 +1,17 @@
+13:05:41 INFO      [deprecation] User Deprecated: Support for MySQL < 8 is deprecated and will be removed in DBAL 5 (AbstractMySQLDriver.php:75 called by AbstractDriverMiddleware.php:32, https://github.com/doctrine/dbal/pull/6343, package doctrine/dbal) ["exception" => ErrorException { …}]
+
+ [OK] Consuming messages from transport "async".                                
+
+
+ // The worker will automatically exit once it has processed 1 messages or      
+ // received a stop signal via the messenger:stop-workers command.              
+
+ // Quit the worker with CONTROL-C.                                             
+
+13:05:41 INFO      [cache] Lock acquired, now computing item "zenstruck_messenger_monitor.worker.253572" ["key" => "zenstruck_messenger_monitor.worker.253572"]
+13:05:41 INFO      [messenger] Received message App\Message\TestMessageOne ["class" => "App\Message\TestMessageOne"]
+13:05:41 CRITICAL  [messenger] Error thrown while handling message App\Message\TestMessageOne. Removing from transport after 0 retries. Error: "Handling "App\Message\TestMessageOne" failed: Random failure (5% chance) for TestMessageOne." ["class" => "App\Message\TestMessageOne","message_id" => 2,"retryCount" => 0,"error" => "Handling "App\Message\TestMessageOne" failed: Random failure (5% chance) for TestMessageOne.","exception" => Symfony\Component\Messenger\Exception\HandlerFailedException { …}]
+13:05:41 INFO      [messenger] Rejected message App\Message\TestMessageOne will be sent to the failure transport Symfony\Component\Messenger\Bridge\Doctrine\Transport\DoctrineTransport. ["class" => "App\Message\TestMessageOne","transport" => "Symfony\Component\Messenger\Bridge\Doctrine\Transport\DoctrineTransport"]
+13:05:41 INFO      [cache] Lock acquired, now computing item "zenstruck_messenger_monitor.worker.253572" ["key" => "zenstruck_messenger_monitor.worker.253572"]
+13:05:41 INFO      [messenger] Stopping worker. ["transport_names" => ["async"]]
+13:05:41 INFO      [messenger] Worker stopped due to maximum count of 1 messages processed ["count" => 1]

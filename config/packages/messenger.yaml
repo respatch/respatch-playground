@@ -9,13 +9,12 @@ framework:
                 retry_strategy:
                     max_retries: 0
                     multiplier: 2
+
+                failure_transport: failed
             failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
 
         default_bus: messenger.bus.default
-
-        buses:
-            messenger.bus.default: []
 
         routing:
             Symfony\Component\Mailer\Messenger\SendEmailMessage: async

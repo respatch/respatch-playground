@@ -11,7 +11,7 @@ class TestMessageOneHandler
     public function __invoke(TestMessageOne $message): void
     {
         sleep(30);
-        if (random_int(1, 100) <= 5) {
+        if (random_int(1, 100) <= 10) {
             throw new \Exception('Random failure (5% chance) for TestMessageOne.');
         }
 
