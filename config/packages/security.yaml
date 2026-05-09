@@ -12,6 +12,7 @@ security:
             # Ensure dev tools and static assets are always allowed
             pattern: ^/(_profiler|_wdt|assets|build)/
             security: false
+            stateless: true
         respatch_api:
             pattern: ^/_respatch/api
             stateless: true
