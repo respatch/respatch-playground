@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d540fd48ae194bba51c5c63d1163d416",
+    "content-hash": "63d9599b04c9272e2e1245e3fc028699",
     "packages": [
         {
             "name": "composer/semver",
@@ -1489,10 +1489,16 @@
         {
             "name": "mostka-sk/respatch-bundle",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mostka-sk/respatch-bundle.git",
+                "reference": "66e5b0959e9dd5bb25267954f4fabe09ed4260a0"
+            },
             "dist": {
-                "type": "path",
-                "url": "../server",
-                "reference": "fd3be073e171941414f13a8541ee58e5cf9b0980"
+                "type": "zip",
+                "url": "https://api.github.com/repos/mostka-sk/respatch-bundle/zipball/66e5b0959e9dd5bb25267954f4fabe09ed4260a0",
+                "reference": "66e5b0959e9dd5bb25267954f4fabe09ed4260a0",
+                "shasum": ""
             },
             "require": {
                 "opis/json-schema": "^2.6",
@@ -1500,24 +1506,23 @@
                 "symfony/framework-bundle": "^6.4|^7.4|^8.0",
                 "zenstruck/messenger-monitor-bundle": "^0.6.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
                     "MostkaSk\\RespatchBundle\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "MostkaSk\\RespatchBundle\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Acme bundle description",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/mostka-sk/respatch-bundle/issues",
+                "source": "https://github.com/mostka-sk/respatch-bundle/tree/main"
+            },
+            "time": "2026-05-10T12:38:06+00:00"
         },
         {
             "name": "opis/json-schema",

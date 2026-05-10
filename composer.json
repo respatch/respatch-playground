@@ -48,12 +48,6 @@
         "twig/twig": "^2.12|^3.24",
         "zenstruck/messenger-monitor-bundle": "^0.6.0"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../server"
-        }
-    ],
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
