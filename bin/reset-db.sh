@@ -4,15 +4,15 @@
 cd "$(dirname "$0")/.."
 
 echo "Zastavujem messenger consumerov (ak bežia)..."
-php bin/console messenger:stop-workers --quiet || true
+php bin/console messenger:stop-workers --env=dev --quiet || true
 
 echo "Zhadzujem schému..."
-php bin/console doctrine:schema:drop --force --full-database --no-interaction
+php bin/console doctrine:schema:drop --env=dev --force --full-database --no-interaction
 
 echo "Vytváram schému..."
-php bin/console doctrine:schema:create --no-interaction
+php bin/console doctrine:schema:create --env=dev --no-interaction
 
 echo "Načítavam Fixtures..."
-php bin/console doctrine:fixtures:load --no-interaction
+php bin/console doctrine:fixtures:load --env=dev --no-interaction
 
 echo "Databáza bola úspešne resetovaná a naplnená demo dátami!"
